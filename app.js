@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 const ect = require('ect');
 
 const routes = require('./routes/index');
-const users = require('./routes/users');
 
 const app = express();
 
@@ -17,6 +16,7 @@ const ectRender = ect({
     root: `${__dirname}/views`,
     ext: '.html'
 });
+
 // set view engine html
 app.set('view engine', 'html');
 app.engine('html', ectRender.render);
@@ -34,6 +34,5 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
 
 module.exports = app;

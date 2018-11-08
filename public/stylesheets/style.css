@@ -1,8 +1,10 @@
-body {
+* {
   padding: 0;
   margin: 0;
+}
+
+body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  min-width: 1200px;
 }
 
 a {
@@ -51,8 +53,8 @@ a:hover {
 /*footer*/
 .footer_section {
   position: absolute;
+  left: 0;
   bottom: 0;
-  display: block;
   width: 100%;
   background-color: #29323F;
 }
