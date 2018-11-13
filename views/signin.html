@@ -1,0 +1,36 @@
+<% extend 'baseContainer' %>
+
+<div class="registerPageContent">
+    <h1>Добро пожаловать на PROJECT_NAME</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, tempore! Alias ea harum magni minus nobis odio perspiciatis quas, sapiente temporibus voluptate. Aliquam libero nihil porro sit totam, velit!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, tempore! Alias ea harum magni minus nobis odio perspiciatis quas, sapiente temporibus voluptate. Aliquam libero nihil porro sit totam, velit!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, tempore! Alias ea harum magni minus nobis odio perspiciatis quas, sapiente temporibus voluptate. Aliquam libero nihil porro sit totam, velit!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, tempore! Alias ea harum magni minus nobis odio perspiciatis quas, sapiente temporibus voluptate. Aliquam libero nihil porro sit totam, velit!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias doloremque facilis laboriosam libero similique ut? Aspernatur consequatur dignissimos dolore doloremque dolores enim fugiat laudantium, maiores nulla numquam quae quasi temporibus.</p>
+</div>
+<div class="formContainer">
+    <br>
+    <br>
+    <br>
+    <section class="loginSection">
+        <form method="post" action="/api/login" class="loginForm">
+            <input type="text" id="loginInput" placeholder="Введите ваш Email">
+            <input type="password" id="pwdInput" placeholder="Введите пароль">
+            <br>
+            <button type="submit" class="submitButton loginButton">Войти</button>
+        </form>
+    </section>
+
+    <label class="regLabel" for="regSection">Хотите зарегистрироваться?</label>
+    <label for="regSection">Моментальная регистрация</label>
+    <section class="registerSection" id="regSection">
+        <form method="post" action="/api/register" class="registerForm">
+            <input type="email" name="login" id="registerEmailInput" placeholder="Введите ваш Email">
+            <input type="text" id="registerNameInput" placeholder="Имя на сайте">
+            <input type="password" id="registerPasswordInput" placeholder="Пароль">
+            <input type="password" id="registerPasswordAgainInput" placeholder="Пароль еще раз">
+            <br>
+            <button type="submit"class="submitButton registerButton">Зарегистрироваться</button>
+        </form>
+    </section>
+</div>
