@@ -8,7 +8,7 @@
             <div id="loginForm" class="Forms">
 
               <h2>Авторизация</h2>
-              <form action="">
+              <form action="/api/signin" method="post">
                 <input type="text" class="text_for_forms_signin" placeholder="email">
                 <input type="password" class="text_for_forms_signin" placeholder="Пароль">
                 <button class="signin_button">Вход</button>
@@ -18,11 +18,11 @@
 
             <div id="registrationForm" class="Forms">
               <h1>Регистрация</h1>
-              <form action="">
+              <form action="/api/register">
                 <input type="text" class="text_for_forms_signin" placeholder="Укажите email">
-              <input type="password" class="text_for_forms_signin" placeholder="Придумайте пароль">
-              <input type="password" class="text_for_forms_signin" placeholder="Повторите пароль">
-              <button class="register_button">Продолжить регистрацию</button>
+                <input type="password" class="text_for_forms_signin" placeholder="Придумайте пароль">
+                <input type="password" class="text_for_forms_signin" placeholder="Повторите пароль">
+                <button class="register_button">Продолжить регистрацию</button>
               </form>
             </div>
 
