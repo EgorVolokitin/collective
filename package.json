@@ -13,7 +13,8 @@
     "ect": "^0.5.9",
     "express": "^4.16.4",
     "morgan": "~1.0.0",
-    "static-favicon": "~1.0.0"
+    "static-favicon": "~1.0.0",
+    "yarn": "^1.12.3"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"
