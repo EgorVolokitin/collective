@@ -1,36 +1,48 @@
-<% extend 'baseContainer' %>
+<% extend 'Container' %>
+<section class="Container">
+  <div class="shell3">
+    <div class="shell2">
+      <div class="shell1">
+        <div class="signinContent">
+          <div class="signin_column">
+            <div id="loginForm" class="Forms">
 
-<div class="registerPageContent">
-    <h1>Добро пожаловать на PROJECT_NAME</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, tempore! Alias ea harum magni minus nobis odio perspiciatis quas, sapiente temporibus voluptate. Aliquam libero nihil porro sit totam, velit!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, tempore! Alias ea harum magni minus nobis odio perspiciatis quas, sapiente temporibus voluptate. Aliquam libero nihil porro sit totam, velit!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, tempore! Alias ea harum magni minus nobis odio perspiciatis quas, sapiente temporibus voluptate. Aliquam libero nihil porro sit totam, velit!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non quo, tempore! Alias ea harum magni minus nobis odio perspiciatis quas, sapiente temporibus voluptate. Aliquam libero nihil porro sit totam, velit!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias doloremque facilis laboriosam libero similique ut? Aspernatur consequatur dignissimos dolore doloremque dolores enim fugiat laudantium, maiores nulla numquam quae quasi temporibus.</p>
-</div>
-<div class="formContainer">
-    <br>
-    <br>
-    <br>
-    <section class="loginSection">
-        <form method="post" action="/api/login" class="loginForm">
-            <input type="text" id="loginInput" placeholder="Введите ваш Email">
-            <input type="password" id="pwdInput" placeholder="Введите пароль">
-            <br>
-            <button type="submit" class="submitButton loginButton">Войти</button>
-        </form>
-    </section>
+              <h2>Авторизация</h2>
+              <form method="POST" action="/api/login">
+                <input type="text" class="text_for_forms_signin" placeholder="email">
+                <input type="password" class="text_for_forms_signin" placeholder="Пароль">
+                <button class="signin_button">Вход</button>
+              </form>
 
-    <label class="regLabel" for="regSection">Хотите зарегистрироваться?</label>
-    <label for="regSection">Моментальная регистрация</label>
-    <section class="registerSection" id="regSection">
-        <form method="post" action="/api/register" class="registerForm">
-            <input type="email" name="login" id="registerEmailInput" placeholder="Введите ваш Email">
-            <input type="text" id="registerNameInput" placeholder="Имя на сайте">
-            <input type="password" id="registerPasswordInput" placeholder="Пароль">
-            <input type="password" id="registerPasswordAgainInput" placeholder="Пароль еще раз">
+            </div>
+
+            <div id="registrationForm" class="Forms">
+              <h1>Ещё не с нами?</h1>
+              <h4 class="small_text">Пройдите быструю регистрацию</h4>
+              <form method="POST" action="/api/register">
+                <input type="text" class="text_for_forms_signin" placeholder="Укажите email">
+                <input type="text" class="text_for_forms_signin" placeholder="Придумайте никнейм">
+                <input type="password" class="text_for_forms_signin" placeholder="Придумайте пароль">
+                <input type="password" class="text_for_forms_signin" placeholder="Повторите пароль">
+                <button class="register_button">Продолжить регистрацию</button>
+              </form>
+            </div>
+
+          </div>
+            
+          <div class="signin_project_description">
+            <h1>Добропожаловать на Sphere Connection!</h1>
             <br>
-            <button type="submit"class="submitButton registerButton">Зарегистрироваться</button>
-        </form>
-    </section>
-</div>
+            <div class="text_signin_content">
+                <p>Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet conse ctepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit.</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
