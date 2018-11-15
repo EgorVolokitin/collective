@@ -45,7 +45,6 @@ a:hover {
 
 /*container*/
 .container {
-
 }
 /*/container*/
 
@@ -153,4 +152,9 @@ a:hover {
   font-size: 17px
 }
 
+.small_text{
+  margin-top: 2px;
+  color: #c7c7c7;
+  font-size: 14px;
+}
 /*/signin*/
