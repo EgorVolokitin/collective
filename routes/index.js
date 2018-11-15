@@ -10,4 +10,8 @@ router.get('/qqq', function (req, res) {
     res.render('index', { title: '&copy; JKOVPIDORAS OFFICIAL SITE' })
 })
 
+router.get('/signin', function(req, res) {
+  res.render('signIn', { title: 'SIGNIN' });
+});
+
 module.exports = router;
