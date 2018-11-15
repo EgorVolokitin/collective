@@ -12,4 +12,8 @@ router.get('/', function(req, res) {
     //     res.send('qwertyui');
     // })
 
+router.get('/signin', function(req, res) {
+  res.render('signIn', { title: 'SIGNIN' });
+});
+
 module.exports = router;
