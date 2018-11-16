@@ -10,10 +10,10 @@
     "body-parser": "^1.18.3",
     "config": "^2.0.1",
     "cookie-parser": "^1.4.3",
-    "db-migrate-pg": "^0.4.0",
     "debug": "~0.7.4",
     "ect": "^0.5.9",
     "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
     "morgan": "~1.0.0",
     "pg": "^7.6.1",
     "pg-hstore": "^2.3.2",
@@ -22,6 +22,7 @@
     "yarn": "^1.12.3"
   },
   "devDependencies": {
-    "nodemon": "^1.18.6"
+    "nodemon": "^1.18.6",
+    "db-migrate-pg": "^0.4.0"
   }
 }
