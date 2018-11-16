@@ -18,6 +18,7 @@ exports.up = function(db) {
   return db.createTable('users', {
     id: { type: 'int', primaryKey: true, allowNull: false, autoIncrement: true },
     email: { type: 'text', allowNull: false, unique: true },
+    nickname: { type: 'text', allowNull: false, unique: true },
     role: { type: 'int', allowNull: false, defaultValue: 0 }, // 0 - user, 500 - admin
     emailConfirmed: { type: 'boolean', allowNull: false, defaultValue: false },
     userBanned: { type: 'boolean', defaultValue: false, allowNull: false },

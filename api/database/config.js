@@ -8,6 +8,7 @@ const sequelize = new Sequelize(database, user, password, {
     host,
     port,
     operatorsAliases: false,
+    dialect,
 
     pool: {
         acquire: 30000,
