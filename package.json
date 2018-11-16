@@ -17,7 +17,8 @@
     "pg": "^7.6.1",
     "pg-hstore": "^2.3.2",
     "sequelize": "^4.41.2",
-    "static-favicon": "~1.0.0"
+    "static-favicon": "~1.0.0",
+    "yarn": "^1.12.3"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"
