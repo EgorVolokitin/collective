@@ -10,8 +10,4 @@ router.get('/signin', function(req, res) {
   res.render('signIn', { title: 'SIGNIN' });
 });
 
-router.get('/signin', function(req, res) {
-  res.render('signIn', { title: 'SIGNIN' });
-});
-
 module.exports = router;

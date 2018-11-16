@@ -1,0 +1,10 @@
+{
+  "dev": {
+      "driver": "pg",
+      "user": "sphere-connection-user-db",
+      "password": "qwerty",
+      "host": "localhost",
+      "database": "sphere-connection",
+      "schema": "my_schema"
+  }
+}
