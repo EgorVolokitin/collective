@@ -6,36 +6,38 @@
         <div class="signinContent">
           <div class="signin_column">
             <div id="loginForm" class="Forms">
-
               <h2>Авторизация</h2>
-              <form action="">
-                <input type="text" class="text_for_forms_signin" placeholder="email">
-                <input type="password" class="text_for_forms_signin" placeholder="Пароль">
+              <form method="POST" action="/api/login">
+                <input type="text" class="text_for_forms_signin" name="emailOrNick" placeholder="Email или никнейм">
+                <input type="password" class="text_for_forms_signin" name="password" placeholder="Пароль">
                 <button class="signin_button">Вход</button>
               </form>
-
             </div>
-
             <div id="registrationForm" class="Forms">
-              <h1>Регистрация</h1>
-              <form action="">
-                <input type="text" class="text_for_forms_signin" placeholder="Укажите email">
-              <input type="password" class="text_for_forms_signin" placeholder="Придумайте пароль">
-              <input type="password" class="text_for_forms_signin" placeholder="Повторите пароль">
-              <button class="register_button">Продолжить регистрацию</button>
+              <h1>Ещё не с нами?</h1>
+              <h4 class="small_text">Пройдите быструю регистрацию</h4>
+              <form method="POST" action="/api/register">
+                <input type="email" class="text_for_forms_signin" name="email" placeholder="Укажите email">
+                <input type="text" class="text_for_forms_signin" name="nickname" placeholder="Придумайте никнейм">
+                <input type="password" class="text_for_forms_signin" name="password" placeholder="Придумайте пароль">
+                <input type="password" class="text_for_forms_signin" name="confirmedPassword" placeholder="Повторите пароль">
+                <button class="register_button">Продолжить регистрацию</button>
               </form>
             </div>
 
           </div>
             
           <div class="signin_project_description">
-            <h1>Добропожаловать на PROJECT_NAME!</h1>
+            <h1>Добропожаловать на Sphere Connection!</h1>
             <br>
             <div class="text_signin_content">
                 <p>Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit.</p>
+                <br>
                 <p>Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit.</p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A corrupti veniam, voluptatum nulla tempora mollitia debitis ut rem consequatur molestiae odio aspernatur eaque quaerat quos! Architecto tenetur necessitatibus natus fugit.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum necessitatibus, iure id cumque sit nihil dolor quia est deleniti dolorum, illo alias. Voluptatem saepe ut dicta suscipit nostrum illum laborum?
+                <br>
+                <p>Lorem ipsum dolor sit amet conse ctepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit. Lorem ipsum dolor sit amet consectepture adipisicing elit.</p>
             </div>
             
           </div>
