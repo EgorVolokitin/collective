@@ -5,8 +5,17 @@ const jwt = require('jsonwebtoken');
 const auth = require('./auth');
 
 router.post('/login', async function (req, res) {
-        console.log(req);
-        res.send('OK, Login successfull');
+        const user = await auth.login({ emailOrNick: req.body.emailOrNick, password: req.body.password });
+        if(!user) {
+            res.send('Не верно введен логин или пароль');
+            return null;
+        }
+        const token = await auth.authenticate({ uid: user.dataValues.id });
+
+        res.cookie('authentication',
+        token, {
+            secure: true
+        }).redirect('/');
     })
 
     .post('/register', async function(req, res) {
@@ -17,12 +26,12 @@ router.post('/login', async function (req, res) {
         }
 
         const user = await auth.register({ email: req.body.email, password: req.body.password, nickname: req.body.nickname });
-        const token = await auth.authenticate(user.dataValues.id);
-        console.log(token);
+        const token = await auth.authenticate({ uid: user.dataValues.id });
 
         res.cookie('authentication',
-        token,
-        { secure: true }).redirect('/');
+        token, {
+            secure: true
+        }).redirect('/');
     })
 
     .get('/', function (req, res) {
