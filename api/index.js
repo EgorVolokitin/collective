@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken');
 const auth = require('./auth');
 
 router.post('/login', async function (req, res) {
-        
         const user = await auth.login({ emailOrNick: req.body.emailOrNick, password: req.body.password });
         if(!user) {
             res.send('Не верно введен логин или пароль');
