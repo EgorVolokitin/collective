@@ -46,7 +46,7 @@
             <a href="/" class="header_a left_top_menu">Главная</a>
             <a href="/blogs" class="header_a left_top_menu">Блоги</a>
             <a href="/socials" class="header_a left_top_menu">Сообщества</a>
-            <% if @isAuthenticated = true : %>
+            <% if @auth.isAuthenticated == true : %>
                 <div class="headerMenu">
                     <ul class="topmenu">
                         <li><a href="" class="submenu-link">Nickname</a>

@@ -7,15 +7,14 @@ const auth = require('./auth');
 router.post('/login', async function (req, res) {
         const user = await auth.login({ emailOrNick: req.body.emailOrNick, password: req.body.password });
         if(!user) {
+            // TODO :: сверстать блок для вывода ошибки.
             res.send('Не верно введен логин или пароль');
             return null;
         }
         const token = await auth.authenticate({ uid: user.dataValues.id });
 
         res.cookie('authentication',
-        token, {
-            secure: true
-        }).redirect('/');
+        token, {}).redirect('/');
     })
 
     .post('/register', async function(req, res) {
