@@ -1,17 +1,24 @@
+'use strict';
 const express = require('express');
 const router = express.Router();
 
-/* GET home page. */
+// Функция рендера страницы с учетом аутентифицированности пользователя
+function renderPage(pageName, title, cookies, res) {
+  cookies.authentication ?
+    res.render(pageName, { title: title, auth: {
+      isAuthenticated: true
+    }}) :
+    res.render(pageName, { title: title, auth: {
+      isAuthenticated: false
+    }});
+}
+
 router.get('/', function(req, res) {
-  res.render('index', { title: 'ECT_EXPRESS' });
+  renderPage('index', 'Главная', req.cookies, res);
 });
 
 router.get('/signin', function(req, res) {
-  res.render('signIn', { title: 'SIGNIN' });
-});
-
-router.get('/signin', function(req, res) {
-  res.render('signIn', { title: 'SIGNIN' });
+  renderPage('signIn', 'Вход', req.cookies, res);
 });
 
 module.exports = router;
