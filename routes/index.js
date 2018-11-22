@@ -1,15 +1,31 @@
+'use strict';
 const express = require('express');
 const router = express.Router();
+const { validateToken } = require('../api/auth');
 
-/* GET home page. */
+// Функция рендера страницы с учетом аутентифицированности пользователя
+async function renderPage(pageName, title, cookies, res) {
+  const token = await validateToken(cookies.authentication);
+  console.log(token);
+  token ?
+    res.render(pageName, { title: title, auth: {
+      isAuthenticated: true
+    }}) :
+    res.clearCookie('authentication')
+      .render(pageName, { title: title, auth: {
+      isAuthenticated: false
+    }});
+}
+
 router.get('/', function(req, res) {
-  res.render('index', { title: 'ECT_EXPRESS' });
+  renderPage('index', 'Главная', req.cookies, res);
 });
 
 router.get('/signin', function(req, res) {
-  res.render('signIn', { title: 'SIGNIN' });
+  renderPage('signIn', 'Вход', req.cookies, res);
 });
 
+<<<<<<< HEAD
 router.get('/signin', function(req, res) {
   res.render('signIn', { title: 'SIGNIN' });
 });
@@ -17,5 +33,12 @@ router.get('/signin', function(req, res) {
 router.get('/profile', function(req, res) {
   res.render('profile', { title: 'profile' });
 });
+=======
+router.get('/qqq', async function(req, res) {
+  const token = await validateToken(req.cookies.authentication);
+  res.send('qqq');
+}) 
+
+>>>>>>> 83ca19e17c088e5c2c390b53a8a037b5651a625f
 
 module.exports = router;

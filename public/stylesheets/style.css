@@ -47,7 +47,11 @@ a:hover {
   display: block;
   margin: 0 auto;
   float: right;
+<<<<<<< HEAD
   margin-top: 25px;
+=======
+  margin-top: 20px;
+>>>>>>> 83ca19e17c088e5c2c390b53a8a037b5651a625f
 }
 .headerMenu ul {
   list-style: none;
@@ -70,7 +74,11 @@ a:hover {
   font-size: 18px;
   font-weight: bold;
   color: #a5a5a5;
+<<<<<<< HEAD
   padding: 23px 20px;
+=======
+  padding: 15px 40px;
+>>>>>>> 83ca19e17c088e5c2c390b53a8a037b5651a625f
 }
 .topmenu li a:hover { color: #FFFFFF; }
 .submenu-link:after {
@@ -80,24 +88,41 @@ a:hover {
   margin-left: 15px;
 }
 .submenu {
+<<<<<<< HEAD
   background: #233c49;
   position: absolute;
   right: -250%;
   top: 40px;
   z-index: 5;
   width: 190px;
+=======
+  background: #213742;
+  position: absolute;
+  left: 0;
+  top: 150%;
+  z-index: 5;
+  width: 180px;
+>>>>>>> 83ca19e17c088e5c2c390b53a8a037b5651a625f
   opacity: 0;
   transform: scaleY(0);
   transform-origin: 0 0;
   transition: .5s ease-in-out;
+<<<<<<< HEAD
   border-left: 10px solid #0078b6;
   border-right: 10px solid #0078b6;
+=======
+  border-left: 10px solid #05608d;
+>>>>>>> 83ca19e17c088e5c2c390b53a8a037b5651a625f
 }
 .submenu a {
   color: #a5a5a5;
   text-align: left;
   padding: 0px 30px 0px;
+<<<<<<< HEAD
   font-size: 16px;
+=======
+  font-size: 18px;
+>>>>>>> 83ca19e17c088e5c2c390b53a8a037b5651a625f
 }
 .submenu li:last-child a { border-bottom: none; }
 .topmenu > li:hover .submenu {
@@ -120,7 +145,11 @@ a:hover {
 
 /*container*/
 .container {
+<<<<<<< HEAD
   width: 1080px;
+=======
+
+>>>>>>> 83ca19e17c088e5c2c390b53a8a037b5651a625f
 }
 /*/container*/
 
