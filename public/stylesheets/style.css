@@ -47,7 +47,7 @@ a:hover {
   display: block;
   margin: 0 auto;
   float: right;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 .headerMenu ul {
   list-style: none;
@@ -70,7 +70,7 @@ a:hover {
   font-size: 18px;
   font-weight: bold;
   color: #a5a5a5;
-  padding: 15px 40px;
+  padding: 23px 20px;
 }
 .topmenu li a:hover { color: #FFFFFF; }
 .submenu-link:after {
@@ -80,23 +80,24 @@ a:hover {
   margin-left: 15px;
 }
 .submenu {
-  background: #213742;
+  background: #233c49;
   position: absolute;
-  left: 0;
-  top: 150%;
+  right: -250%;
+  top: 40px;
   z-index: 5;
-  width: 180px;
+  width: 190px;
   opacity: 0;
   transform: scaleY(0);
   transform-origin: 0 0;
   transition: .5s ease-in-out;
-  border-left: 10px solid #05608d;
+  border-left: 10px solid #0078b6;
+  border-right: 10px solid #0078b6;
 }
 .submenu a {
   color: #a5a5a5;
   text-align: left;
   padding: 0px 30px 0px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .submenu li:last-child a { border-bottom: none; }
 .topmenu > li:hover .submenu {
@@ -119,7 +120,7 @@ a:hover {
 
 /*container*/
 .container {
-
+  width: 1080px;
 }
 /*/container*/
 
@@ -233,3 +234,59 @@ a:hover {
   font-size: 14px;
 }
 /*/signin*/
+
+/*/profile*/
+.user-profile-info{
+  margin-top: 42px;
+  margin-bottom: 35px;
+}
+.left-col{
+  width: 600px;
+  min-width: 600px;
+}
+.user-info{
+  display: table;
+  min-height: 120px;
+}
+
+.user-avatar-info-page{
+  width: 400px;
+  min-height: 120px;
+  line-height: 1.5;
+  position: relative;
+  margin: 0 20px;
+  padding-left: 24%;
+  padding-top: 20px;
+}
+
+.user-avatar-info-page-blackBack{
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 118px;
+  min-height: 118px;
+  background-color: #191919;
+  border-radius: 59px;
+}
+
+.user-additional_info{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.info-additional-username a{
+  color: #0078b6;
+  font-weight: 400;
+  font-size: 18px;
+  
+}
+
+.info-additional-username a:hover{
+  color: #05608d;
+}
+
+.info-additional-fullname a{
+  color: #aab7be
+}
+
+/*/profile*/
