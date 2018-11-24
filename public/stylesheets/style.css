@@ -239,10 +239,22 @@ a:hover {
 .user-profile-info{
   margin-top: 42px;
   margin-bottom: 35px;
+  box-sizing: border-box;
+  min-width: 1080px;
+  max-width: 1080px;
 }
 .left-col{
   width: 600px;
   min-width: 600px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.right-col{
+  width: 200px;
+  min-width: 200px;
+  margin-top: -90px;
+  margin-left: 800px;
 }
 .user-info{
   display: table;
@@ -272,13 +284,13 @@ a:hover {
 .user-additional_info{
   display: table-cell;
   vertical-align: middle;
+  min-width: 900px;
 }
 
 .info-additional-username a{
   color: #0078b6;
   font-weight: 400;
   font-size: 18px;
-  
 }
 
 .info-additional-username a:hover{
@@ -289,6 +301,110 @@ a:hover {
   color: #aab7be
 }
 
+.info-additional-common{
+  color: #787d82;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -.02em;
+}
+
+.user-rating-on-profile{
+  width: 220px;
+  height: 87px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  color: #0078b6
+  
+}
+
+.user-rating-value-on-profile{
+  letter-spacing: -.01em;
+  font-weight: 400px;
+  font-size: 30px;
+}
+
+.rating-name{
+  color: #787d82;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+.user-profile-content{
+  min-width: 820px;;
+  width: 820px;
+  min-height: 500px;
+  margin-left: 120px;
+  margin-top: 30px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  padding: 40px 50px; 
+}
+
+.about-me-profile{
+  color: #787d82;
+  font-size: 16px;
+}
+.about-me-profile-text{
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.user-profile-links{
+  margin-top: 10px;
+}
+
+.user-profile-social{
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.user-profile-social li{
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.user-profile-posts{
+  margin-top: 20px;
+}
+
+.post-on-profile-page{
+  width: 730px;
+  min-height: 100px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.mini-img-post-preview{
+  max-width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+  min-width: 100px;
+  background-color: #0078b6;
+}
+
+.short-name-on-profile-page{
+  margin: -90px 120px 0px;
+  max-width: 600px;
+  font-size: 22px;
+  color: #787d82;
+}
+
+.short-name-on-profile-page a{
+  color: #787d82;
+}
+
+.short-name-on-profile-page :hover{
+  color: #0078b6;
+  cursor: pointer;
+}
+
+.short-description-on-profile{
+  margin-left: 120px;
+  font-size: 16px;
+  color: #191919;
+}
 /*/profile*/
 
 /*Notif*/
