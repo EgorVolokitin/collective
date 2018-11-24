@@ -239,6 +239,7 @@ a:hover {
 .user-profile-info{
   margin-top: 42px;
   margin-bottom: 35px;
+  margin-left: 90px;
   box-sizing: border-box;
   min-width: 1080px;
   max-width: 1080px;
@@ -254,7 +255,7 @@ a:hover {
   width: 200px;
   min-width: 200px;
   margin-top: -90px;
-  margin-left: 800px;
+  margin-left: 710px;
 }
 .user-info{
   display: table;
@@ -404,6 +405,29 @@ a:hover {
   margin-left: 120px;
   font-size: 16px;
   color: #191919;
+}
+
+.pagination_block{
+  margin-left: 230px;
+  margin-top: 30px; 
+}
+
+.pagination_block ul.pagination_block_ul li{
+  color: #191919;
+  display: inline-block;
+}
+
+.pagination_block ul.pagination_block_ul li div a{
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+.pagination_block_div{
+  padding: 8px;
+  text-align: center;
+  background-color: #0078b6;
+  height: 40px;
+  width: 30px;
 }
 /*/profile*/
 
