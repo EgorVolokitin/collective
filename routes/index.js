@@ -25,6 +25,13 @@ router.get('/signin', function(req, res) {
   renderPage('signIn', 'Вход', req.cookies, res);
 });
 
+router.get('/signin', function(req, res) {
+  res.render('signIn', { title: 'SIGNIN' });
+});
+
+router.get('/profile', function(req, res) {
+  renderPage('Profile', 'Профиль', req.cookies, res);
+});
 router.get('/qqq', async function(req, res) {
   const token = await validateToken(req.cookies.authentication);
   res.send('qqq');
