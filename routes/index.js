@@ -30,7 +30,7 @@ router.get('/signin', function(req, res) {
 });
 
 router.get('/profile', function(req, res) {
-  res.render('profile', { title: 'profile' });
+  renderPage('Profile', 'Профиль', req.cookies, res);
 });
 router.get('/qqq', async function(req, res) {
   const token = await validateToken(req.cookies.authentication);
