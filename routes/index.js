@@ -2,36 +2,77 @@
 const express = require('express');
 const router = express.Router();
 const { validateToken } = require('../api/auth');
+const db = require('../api/schemas/db');
 
-// Функция рендера страницы с учетом аутентифицированности пользователя
-async function renderPage(pageName, title, cookies, res) {
+async function createRenderProps(cookies) {
   const token = await validateToken(cookies.authentication);
-  console.log(token);
-  token ?
-    res.render(pageName, { title: title, auth: {
+
+  if(!token) {
+    return await {
+      auth: {
+        isAuthenticated: false
+      },
+      user: {
+        uid: null,
+        nickname: null
+      }
+    }
+  }
+
+  let user = await db.Users.findOne({
+    attributes: ['nickname'],
+    where: {
+      id: token.uid
+    }
+  });
+  
+  return await {
+    auth: {
       isAuthenticated: true
-    }}) :
-    res.clearCookie('authentication')
-      .render(pageName, { title: title, auth: {
-      isAuthenticated: false
-    }});
+    },
+    user: {
+      uid: token.uid,
+      nickname: user.dataValues.nickname
+    }
+  }
 }
 
-router.get('/', function(req, res) {
-  renderPage('index', 'Главная', req.cookies, res);
+router.get('/', async function(req, res) {
+  let props = await createRenderProps(req.cookies);
+  props.title = 'Главная';
+
+  res.render('index', props);
 });
 
-router.get('/signin', function(req, res) {
-  renderPage('signIn', 'Вход', req.cookies, res);
+router.get('/signin', async function(req, res) {
+  let props = await createRenderProps(req.cookies);
+  props.title = 'Вход';
+
+  res.render('signIn', props);
 });
 
-router.get('/signin', function(req, res) {
-  res.render('signIn', { title: 'SIGNIN' });
+router.get('/profile/:id', async function(req, res) {
+  let props = await createRenderProps(req.cookies);
+  let user = await db.Users.findOne({
+    attributes: ['nickname'],
+    where: {
+      id: req.params.id
+    }
+  });
+
+  if(!user) {
+    // TODO :: рендерить 404 страницу
+    res.redirect('/');
+    return null;
+  }
+  props.title = user.dataValues.nickname;
+  props.pageUser = {
+    nickname: user.dataValues.nickname
+  }
+
+  res.render('profile', props);
 });
 
-router.get('/profile', function(req, res) {
-  renderPage('Profile', 'Профиль', req.cookies, res);
-});
 router.get('/qqq', async function(req, res) {
   const token = await validateToken(req.cookies.authentication);
   res.send('qqq');
