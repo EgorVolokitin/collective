@@ -96,7 +96,7 @@ a:hover {
 .submenu a {
   color: #a5a5a5;
   text-align: left;
-  padding: 0px 30px 0px;
+  padding: 0px 20px 0px;
   font-size: 16px;
 }
 .submenu li:last-child a { border-bottom: none; }
@@ -239,7 +239,7 @@ a:hover {
 .user-profile-info{
   margin-top: 42px;
   margin-bottom: 35px;
-  margin-left: 90px;
+  margin-left: 50px;
   box-sizing: border-box;
   min-width: 1080px;
   max-width: 1080px;
@@ -252,10 +252,8 @@ a:hover {
 }
 
 .right-col{
-  width: 200px;
-  min-width: 200px;
-  margin-top: -90px;
-  margin-left: 710px;
+margin-top: -90px;
+margin-left: 500px;
 }
 .user-info{
   display: table;
@@ -315,8 +313,16 @@ a:hover {
   padding-left: 10px;
   padding-right: 10px;
   text-align: center;
-  color: #0078b6
-  
+  color: #0078b6;
+}
+
+.user-rating-on-profile-color{
+  width: 220px;
+  height: 87px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  color: #d3774d;
 }
 
 .user-rating-value-on-profile{
@@ -335,7 +341,7 @@ a:hover {
   min-width: 820px;;
   width: 820px;
   min-height: 500px;
-  margin-left: 120px;
+  margin-left: 70px;
   margin-top: 30px;
   box-sizing: border-box;
   background-color: #FFFFFF;
@@ -429,6 +435,114 @@ a:hover {
   height: 40px;
   width: 30px;
 }
+
+.li-rating-profile{
+  margin-right: -50px;
+  display: inline-block;
+}
+
+.ad-societatem-conlationem-block{
+  margin-top: 122px;
+  margin-right: -90px;
+  width: 300px;
+  background-color: #FFFFFF;
+  text-align: justify;
+  float: right;
+}
+
+.li-profile-content{
+  display: table-cell; 
+}
+
+.header-block-profile-menu{
+  display: flex;
+  padding-top: 20px;
+  border-bottom: 1px solid #c7c7c7;
+  color: #191919;
+  margin: 0px 20px; 
+}
+
+.content-block-profile-menu-ad{
+  margin-top: 10px;
+  padding: 0px 20px;
+  display: flex;
+}
+
+.content-block-profile-menu-ad ul li{
+  display: inline-block;
+}
+
+.img-on-ad-societatem{
+  background-color: #05608d;
+  width: 36px;
+  height: 36px;
+  flex: none;
+}
+
+.head-description-on-ad-societatem{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-info-title-ad-scietatem{
+  display: inline-block;
+  overflow: hidden;
+  max-width: 130px;
+  color: #5e6973;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.rating-info-stat-ad-scietatem{
+  margin-left: 15px;
+  color: #0078b6;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.a-ad-societatem-conlationem-block{
+  display: flex;
+  flex: 0 1 auto;
+  margin-bottom: 10px;
+}
+
+.move-ad-societatem-conlationem-block{
+  position: relative;
+  flex: 0 1 auto;
+  margin-left: 12px;
+  width: 100%;
+}
+
+.line-ad-societatem{
+  margin-top: 13px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #d2e0e6;
+}
+
+.progress-line-ad-societatem{
+  height: 100%;
+  background: #05608d;
+}
+
+.li-ad-societatem{
+  justify-content: space-between;
+  min-width: 100%;
+  max-width: 100%;
+  width: 200px;
+}
+
+.ul-ad-societatem{
+  text-align: justify;
+}
 /*/profile*/
 
 /*Notif*/
@@ -472,7 +586,6 @@ a:hover {
 	-moz-animation: initiate 350ms ease;
 	-o-animation: initiate 350ms ease;
   animation: initiate 350ms ease;
-  
 }
 
 
