@@ -4,8 +4,8 @@ config.dbSettings = {
   host: 'localhost',
   dialect: 'postgres',
   database: 'sphere-connection',
-  user: 'sphere-connection-user-db',
-  password: 'qwerty',
+  user: 'postgres',
+  password: '647444AsDfQwErZxCv',
   port: 5432
 };
 
