@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <!--SEO-->
-    <meta name="description" content="<%- @short_description %> | PROJECT_NAME" />
+    <meta name="description" content="<%- @short_description %> | Sphere Conection" />
     <meta name="robots" content="all" />
     <!--/SEO-->
     <!--Socials-->
@@ -27,17 +27,19 @@
         <meta itemprop="image" content="[ссылка на изображение]">
     <!--/Socials-->
     <!--Favicons-->
-    <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
+
+    <!-- <link rel="icon" href="favicon-16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="favicon-48.png" sizes="48x48" type="image/png">
     <link rel="icon" href="favicon-62.png" sizes="62x62" type="image/png">
-    <link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png"> -->
+
     <!--/Favicons-->
-    <meta name="application-name" content="PROJECT_NAME">
+    <meta name="application-name" content="Sphere Conection">
     <meta content="width=1080, initial-scale=1" name="viewport" />
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title><%- @title %> | PROJECT_NAME</title>
+    <title><%- @title %> | Sphere Conection</title>
 </head>
 <body>
 <section class="header_section">
@@ -46,7 +48,25 @@
             <a href="/" class="header_a left_top_menu">Главная</a>
             <a href="/blogs" class="header_a left_top_menu">Блоги</a>
             <a href="/socials" class="header_a left_top_menu">Сообщества</a>
+            <a href="/users" class="header_a left_top_menu">Пользователи</a>
+            <% if @auth.isAuthenticated == true : %>
+                <div class="headerMenu">
+                    <ul class="topmenu">
+                        <li><a onclick="javascript:void(0)" class="submenu-link"><%- @user.nickname %></a>
+                            <ul class="submenu">
+                                <li class="menuLi"><a href="/profile/<%- @user.uid %>">Профиль</a></li>
+                                <li class="menuLi"><a href="/spheres">Сферы</a></li>
+                                <li class="menuLi"><a href="/create_post">Создать статью</a></li>
+                                <li class="menuLi"><a href="/settings">Настройки</a></li>
+                                <li class="menuLi"><a href="/logout">Выход</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            <% else : %>
             <a href="/signin" class="header_a right_top_menu top_menu_button">Вход/Регистрация</a>
+            <% end %>
         </nav>
     </div>
 </section>
+
