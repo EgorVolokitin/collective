@@ -1,8 +1,8 @@
 {
   "dev": {
       "driver": "pg",
-      "user": "postgres",
-      "password": "647444AsDfQwErZxCv",
+      "user": "sphere-connection-user-db",
+      "password": "qwerty",
       "host": "localhost",
       "database": "sphere-connection",
       "schema": "my_schema"
